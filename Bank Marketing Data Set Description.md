@@ -1,4 +1,4 @@
-# Bank Marketing Data Set
+# Bank Marketing Data Set Metadata Information
 
 ## Abstract
 The data is related with direct marketing campaigns (phone calls) of a Portuguese banking institution. 
