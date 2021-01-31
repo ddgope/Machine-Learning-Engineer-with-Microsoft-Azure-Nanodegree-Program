@@ -1,5 +1,3 @@
-# Machine-Learning-Engineer-with-Microsoft-Azure-Nanodegree-Program
-Azure Machine Learning Project
 # Optimizing an ML Pipeline in Azure
 
 ## Overview
