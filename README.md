@@ -5,7 +5,7 @@ Optimizing an ML Pipeline in Azure - in this project, we build and optimize an A
 This model is then compared to an Azure AutoML run , compare and find the best performance model.
 
 ## Summary
-<p>I have used UCI Bank Marketing dataset, which is related with direct marketing campaigns of a Portuguese baking institution. The classification goal is to predict if the client will subscribe a term deposit (variable y).<a href="https://archive.ics.uci.edu/ml/datasets/Bank+Marketing"> Read More </a></p>.
+<p>I have used UCI Bank Marketing dataset, which is related with direct marketing campaigns of a Portuguese baking institution. The classification goal is to predict if the client will subscribe a term deposit (variable y).<a href="https://archive.ics.uci.edu/ml/datasets/Bank+Marketing"> Read More </a></p>
 <p>Below is the pipeline Architecture!</p>
 <img src='/images/Pipeline_Architecture.png'>
 <p>In this project, I should be using scikit-learn Logistic Regression and tuned the hyperparameters(optimal) using HyperDrive. I have also used AutoML to build and optimize a model on the same dataset, so that I can compare the results of the two methods.
