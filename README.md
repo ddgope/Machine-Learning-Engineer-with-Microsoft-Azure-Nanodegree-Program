@@ -42,7 +42,7 @@ The best performing model was obtained through AutoML - <strong> VotingEnsemble 
 <p>The parameter sampler I chose was <i>RandomParameterSampling</i> because it supports both discrete and continuous hyperparameters. It supports early termination of low-performance runs and supports early stopping policies. In random sampling , the hyperparameter (C : smaller values specify stronger regularization, max_iter : maximum number of iterations taken for the solvers to converge) values are randomly selected from the defined search space. </p>
 
 <strong>Early Stopping Policy</strong>
-<p> The early stopping policy I chose was <i>BanditPolicy</i> because it is based on slack factor and evaluation interval. Bandit terminates runs where the primary metric is not within the specified slack factor compared to the best performing run. <a href = 'https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive.banditpolicy?view=azure-ml-py&preserve-view=true#&preserve-view=truedefinition'>Read More</a></p>
+<p> The early stopping policy I chose was <i>BanditPolicy</i> because it is based on slack factor and evaluation interval. Bandit terminates runs where the primary metric is not within the specified slack factor compared to the best performing run.</p>
 
 ## AutoML
 <ol>
@@ -52,10 +52,8 @@ The best performing model was obtained through AutoML - <strong> VotingEnsemble 
   <li> Configuration of AutoML </li>
   <li> Save the best model generated </li>
 </ol>
-<img src= './images/automl_models.PNG'>
-<p> The below snapshots gives the explanation of the best model prediction by highlighting feature importance values and discovering patterns in data at training time. It also shows differnt metrics and their value for model interpretability and explanation. </p>
 <img src= '/images/Project_4_Automated_ML.JPG'>
-</br>
+<p> The below snapshots gives the explanation of the best model prediction by highlighting feature importance values and discovering patterns in data at training time. It also shows differnt metrics and their value for model interpretability and explanation. </p>
 <img src= '/images/accuracy_table.JPG'>
 </br>
 <img src= '/images/accuracy_table2.JPG'>
@@ -63,10 +61,10 @@ The best performing model was obtained through AutoML - <strong> VotingEnsemble 
 <img src='/images/accuracy_table3.JPG'>
 
 ## Pipeline comparison
-<p>Both the approaches - Logistics + Hyperdrive and AutoML follow similar data processing steps and the difference lies in their configuration details. In the first approach our ML model is fixed and we use hyperdrive tool to find optimal hyperparametets while in second approach different models are automatic generated with their own optimal hyperparameter values and the best model is selected. In the below image, we see that the hyperdrive approach took overall <b>11m 51s</b> and the best model had an accuracy of <b>~0.9146</b> and the automl approach took overall <b>28m 58s</b> and the best model had an acccuracy of <b>~0.9177</b>.
+<p>Both the approaches - Logistics + Hyperdrive and AutoML follow similar data processing steps and the difference lies in their configuration details. In the first approach ML model is fixed and I have used hyperdrive tool to find optimal hyperparametets while in second approach different models are automatic generated with their own optimal hyperparameter values and the best model is selected. In the below image, we see that the hyperdrive approach took overall <b>16m 54s</b> and the best model had an accuracy of <b>~0.91320</b> and the automl approach took overall <b>34m 37s</b> and the best model had an acccuracy of <b>~0.91482</b>.
 </p>
 <img src = '/images/Project_3_Hyperdrive_And_ML.JPG'>
-<p> It is quite evident that AutoML results in better accurate model but takes time to find out one while the Logistic + Hyperdrive takes lesser time to find out an optimal hyperparameter values for a fixed model. Since we have used the same dataset and preprocessed the data in the same fashion we see that both the approaches generate model whose accuracy is very close.
+<p> It is quite evident that AutoML results in better accurate model but takes time to find out one while the Logistic + Hyperdrive takes lesser time to find out an optimal hyperparameter values for a fixed model. Since I have used the same dataset and preprocessed the data in the same fashion we see that both the approaches generate model whose accuracy is very close.
 </p>
 
 ## Future work
