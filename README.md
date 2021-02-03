@@ -6,7 +6,7 @@ This model is then compared to an Azure AutoML run , compare and find the best p
 
 ## Summary
 <p>In this project we have used UCI Bank Marketing dataset, which is related with direct marketing campaigns of a Portuguese baking institution. The classification goal is predict if the client will subscribe a term deposit (variable 'y') or not. <a href="https://archive.ics.uci.edu/ml/datasets/Bank+Marketing"> Read More </a></p>
-<img src='images/Pipeline_Architecture.PNG'>
+<img src='/images/Pipeline_Architecture.png'>
 <p>In this project, we have used scikit-learn Logistic Regression and tuned the hyperparameters(optimal) using HyperDrive. We also used AutoML to build and optimize a model on the same dataset, so that we can compare the results of the two methods.
 The best performing model was obtained through AutoML - <strong> VotingEnsemble </strong> with accuracy of <b>0.91482</b></p>
 
@@ -34,8 +34,9 @@ The best performing model was obtained through AutoML - <strong> VotingEnsemble 
   <li>Save the trained optimized model</li>
 </ol>
 <p>As specified above, we have used logistic regression model for our binary classification problem and hyperdrive tool to choose the best hyperparameter values from the parameter search space. Under the hood logistic regression uses logistic/sigmoidal function to estimate the probabilities between the dependent/target variable and one or more independent variables(features). In the below image, we can see that which hyperdrive run gave the best result.</p>
-<img src = 'images/Project_1_Hyperdrive.jpg'>
-<img src = 'images/Project_2_Hyperdrive.jpg'>
+<img src = '/images/Project_2_Hyperdrive.JPG'>
+</br>
+<img src = '/images/Project_1_Hyperdrive.JPG'>
 
 <strong>Parameter Sampler</strong>
 <p>The parameter sampler I chose was <i>RandomParameterSampling</i> because it supports both discrete and continuous hyperparameters. It supports early termination of low-performance runs and supports early stopping policies. In random sampling , the hyperparameter (C : smaller values specify stronger regularization, max_iter : maximum number of iterations taken for the solvers to converge) values are randomly selected from the defined search space. </p>
@@ -53,14 +54,18 @@ The best performing model was obtained through AutoML - <strong> VotingEnsemble 
 </ol>
 <img src= './images/automl_models.PNG'>
 <p> The below snapshots gives the explanation of the best model prediction by highlighting feature importance values and discovering patterns in data at training time. It also shows differnt metrics and their value for model interpretability and explanation. </p>
-<img src= './images/ve1.PNG'>
-<img src= './images/ve2.PNG'>
-<img src= './images/automl_metric.png'>
+<img src= '/images/Project_4_Automated_ML.JPG'>
+</br>
+<img src= '/images/accuracy_table.JPG'>
+</br>
+<img src= '/images/accuracy_table2.JPG'>
+</br>
+<img src='/images/accuracy_table3.JPG'>
 
 ## Pipeline comparison
 <p>Both the approaches - Logistics + Hyperdrive and AutoML follow similar data processing steps and the difference lies in their configuration details. In the first approach our ML model is fixed and we use hyperdrive tool to find optimal hyperparametets while in second approach different models are automatic generated with their own optimal hyperparameter values and the best model is selected. In the below image, we see that the hyperdrive approach took overall <b>11m 51s</b> and the best model had an accuracy of <b>~0.9146</b> and the automl approach took overall <b>28m 58s</b> and the best model had an acccuracy of <b>~0.9177</b>.
 </p>
-<img src = './images/comparison.PNG'>
+<img src = '/images/Project_3_Hyperdrive_And_ML.JPG'>
 <p> It is quite evident that AutoML results in better accurate model but takes time to find out one while the Logistic + Hyperdrive takes lesser time to find out an optimal hyperparameter values for a fixed model. Since we have used the same dataset and preprocessed the data in the same fashion we see that both the approaches generate model whose accuracy is very close.
 </p>
 
@@ -71,4 +76,4 @@ The best performing model was obtained through AutoML - <strong> VotingEnsemble 
 </ul>
 
 ## Proof of cluster clean up
-<img src= 'images/Deleting.PNG'>
+<img src= '/images/Deleting.JPG'>
