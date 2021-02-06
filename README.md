@@ -138,7 +138,7 @@ This parameter sets how many cross validations to perform, based on the same num
 ## Future work
 * Our data is **highly imbalanced**:
 
-![Highly imbalanced data](img/Imbalanced_data_plot.png?raw=true "Highly imbalanced data")
+![Highly imbalanced data](images/Imbalanced_data_plot.png?raw=true "Highly imbalanced data")
 
 Class imbalance is a very common issue in classification problems in machine learning. Imbalanced data negatively impact the model's accuracy because it is easy for the model to be very accurate just by predicting the majority class, while the accuracy for the minority class can fail miserably. This means that taking into account a simple metric like **accuracy** in order to judge how good our model is can be misleading.
 
