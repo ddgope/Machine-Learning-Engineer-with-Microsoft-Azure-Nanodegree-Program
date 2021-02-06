@@ -7,7 +7,7 @@ This model is then compared to an Azure AutoML run , compare and find the best p
 ## Summary
 <p>I have used UCI Bank Marketing dataset, which is related with direct marketing campaigns of a Portuguese baking institution. The classification goal is to predict if the client will subscribe a term deposit (variable y).<a href="https://archive.ics.uci.edu/ml/datasets/Bank+Marketing"> Read More </a></p>
 <p>Below is the pipeline Architecture!</p>
-<img src='/images/Pipeline_Architecture.png'>
+![Pipeline Architecture](images/Pipeline_Architecture.png)
 <p>In this project, I should be using scikit-learn Logistic Regression and tuned the hyperparameters(optimal) using HyperDrive. I have also used AutoML to build and optimize a model on the same dataset, so that I can compare the results of the two methods.
 The best performing model was obtained through AutoML - <strong> VotingEnsemble </strong> with accuracy of <b>0.91482</b></p>
 
@@ -71,7 +71,7 @@ _RandomParameterSampling_ is one of the choices available for the sampler and I 
 
 An early stopping policy is used to automatically terminate poorly performing runs thus improving computational efficiency. I chose the _BanditPolicy_ which I specified as follows:
 ```
-policy = BanditPolicy(evaluation_interval=2, slack_factor=0.1)
+policy = BanditPolicy(evaluation_interval=3, slack_factor=0.1)
 ```
 _evaluation_interval_: This is optional and represents the frequency for applying the policy. Each time the training script logs the primary metric counts as one interval.
 
