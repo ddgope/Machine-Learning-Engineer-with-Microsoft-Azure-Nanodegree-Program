@@ -7,7 +7,9 @@ This model is then compared to an Azure AutoML run , compare and find the best p
 ## Summary
 <p>I have used UCI Bank Marketing dataset, which is related with direct marketing campaigns of a Portuguese baking institution. The classification goal is to predict if the client will subscribe a term deposit (variable y).<a href="https://archive.ics.uci.edu/ml/datasets/Bank+Marketing"> Read More </a></p>
 <p>Below is the pipeline Architecture!</p>
-![Pipeline Architecture](images/Pipeline_Architecture.png)
+
+![Pipeline Architecture](images/Pipeline_Architecture.png?raw=true "Pipeline Architecture")
+
 <p>In this project, I should be using scikit-learn Logistic Regression and tuned the hyperparameters(optimal) using HyperDrive. I have also used AutoML to build and optimize a model on the same dataset, so that I can compare the results of the two methods.
 The best performing model was obtained through AutoML - <strong> VotingEnsemble </strong> with accuracy of <b>0.91482</b></p>
 
@@ -43,11 +45,6 @@ Step 4: Finally, compare the results of the two methods and write a research rep
   </li><br>  
   <li>Save the trained optimized model</li>
 </ol>
-<p>As specified above, I have used logistic regression model for our binary classification problem and hyperdrive tool to choose the best hyperparameter values from the parameter search space. Under the hood logistic regression uses logistic/sigmoidal function to estimate the probabilities between the dependent/target variable and one or more independent variables(features). In the below image, we can see that which hyperdrive run gave the best result.</p>
-<img src = '/images/Project_2_Hyperdrive.JPG'>
-</br>
-<img src = '/images/Project_1_Hyperdrive.JPG'>
-
 **Parameter Sampler**
 
 I specified the parameter sampler as such:
@@ -78,6 +75,11 @@ _evaluation_interval_: This is optional and represents the frequency for applyin
 _slack_factor_: The amount of slack allowed with respect to the best performing training run. This factor specifies the slack as a ratio.
 
 Any run that doesn't fall within the slack factor or slack amount of the evaluation metric with respect to the best performing run will be terminated. This means that with this policy, the best performing runs will execute until they finish and this is the reason I chose it.
+
+<p>As specified above, I have used logistic regression model for our binary classification problem and hyperdrive tool to choose the best hyperparameter values from the parameter search space. Under the hood logistic regression uses logistic/sigmoidal function to estimate the probabilities between the dependent/target variable and one or more independent variables(features). In the below image, we can see that which hyperdrive run gave the best result.</p>
+<img src = '/images/Project_2_Hyperdrive.JPG'>
+</br>
+<img src = '/images/Project_1_Hyperdrive.JPG'>
 
 ## AutoML
 <ol>
